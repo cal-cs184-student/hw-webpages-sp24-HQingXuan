@@ -2,6 +2,25 @@
 	<head>
 	</head>
 	<body>
-		Homework 1 index.html here
+		Compsci 184 hw01
+		Maodun Zhang 3035626112
+		Haoqing Xuan 3036149505
+		
+		
+		Part 1
+		Rasterization Process:
+		Bounding Box Calculation: The code first calculates the bounding box of the triangle. This is done by finding the minimum and maximum x and y values among the three vertices. This bounding box represents the smallest rectangle that completely contains the triangle.
+		
+		Iterating Over the Bounding Box: The code then iterates over every pixel inside this bounding box. The iteration starts from the minimum x and y values and goes up to the maximum values. For each pixel, the code checks if it lies inside the actual triangle.
+		
+		Orientation Check (Clockwise or Counter-Clockwise): The code calculates whether the triangle is oriented clockwise or counter-clockwise. This is determined using a cross product formula. The sign of this calculation tells us the orientation.
+		
+		Point Inside Triangle Check: For each pixel, the code checks if it's inside the triangle. This is done using a method called the "line equation test" (lecture 2). The code performs this test differently based on the orientation of the triangle (clockwise or counter-clockwise). Essentially, it checks on which side of each edge of the triangle the point lies. If the point is on the "inside" side for all edges, it is inside the triangle.
+		
+		Filling the Pixel: If a pixel is found to be inside the triangle, it would typically be colored (or "filled") with the given color. In this code, the actual filling part is commented out (// fill_pixel(floor(x), floor(y), color);).
+		
+		Efficiency:
+		The naive approach would check every sample point in the bounding box to see if it lies inside the triangle, which this algorithm also does. However, the efficiency of the provided algorithm lies in its simplicity and the directness of the inside-triangle check. The area-based method used here is a straightforward linear equation, which tends to be faster to compute compared to other methods.
+
 	</body>
 </html>
